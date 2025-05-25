@@ -83,15 +83,15 @@ async def predict_spoiler(data: SpoilerRequest):
             prediction = torch.argmax(outputs.logits, dim=1)
 
             for title in titles:
-                if title == "Fight Club":
+                if title.lower() == "fight club":
                     model = ml_models['fight_club']
-                elif title == "The Dark Knight":
+                elif title.lower() == "the dark knight":
                     model = ml_models['the_dark_knight']
-                elif title == "The Godfather":
+                elif title.lower() == "the godfather":
                     model = ml_models['the_godfather']
-                elif title == "The Shawshank Redemption":
+                elif title.lower() == "the shawshank redemption":
                     model = ml_models['the_shawshank_redemption']
-                elif title == "The Lord of the Rings":
+                elif title.lower() == "the Lord of the rings":
                     model = ml_models['lotr']
                 else:
                     continue
