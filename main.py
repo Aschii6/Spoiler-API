@@ -43,7 +43,7 @@ async def lifespan(app: FastAPI):
     ml_models['the_shawshank_redemption'] = AutoModelForSequenceClassification.from_pretrained(model_name)
     ml_models['the_shawshank_redemption'].eval()
 
-    nodel_name = "models/bert_review_200len_0.7corpus_fine_tuned_the_lord_of_the_rings_the_return_of_the_king"
+    model_name = "models/bert_review_200len_0.7corpus_fine_tuned_the_lord_of_the_rings_the_return_of_the_king"
     ml_models['lotr'] = AutoModelForSequenceClassification.from_pretrained(model_name)
     ml_models['lotr'].eval()
 
